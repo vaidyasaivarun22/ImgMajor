@@ -75,7 +75,7 @@ def openfileDec():
 def key():
     global enc_v
     global enc_key
-    if(enc_v.get()=="AES-512"):
+    if(enc_v.get()=="AES-256"):
         enc_key=simpledialog.askstring("password","Enter the password")
    
     else:
@@ -84,7 +84,7 @@ def key():
 def Deckey():
     global dec_v
     global dec_key
-    if(dec_v.get()=="AES-512"):
+    if(dec_v.get()=="AES-256"):
         dec_key=simpledialog.askstring("password","Enter the password")
     else:
         messagebox.showwarning("warning","No method selected")
@@ -93,7 +93,7 @@ def encrypt():
     global enc_v
     global enc_file
     global enc_key
-    if(enc_v.get()=="AES-512"):
+    if(enc_v.get()=="AES-256"):
         AES_EncryptDecrypt.aes_encrypt(parent_dir,enc_key,enc_file)
         tk.messagebox.showinfo("Success","Encryption Successful")
     else:
@@ -104,7 +104,7 @@ def decrypt():
     global dec_v
     global dec_file
     global dec_key
-    if(dec_v.get()=="AES-512"):
+    if(dec_v.get()=="AES-256"):
         AES_EncryptDecrypt.aes_decrypt(parent_dir,dec_key,dec_file)
         tk.messagebox.showinfo("success","Decryption Successful")
     else:
@@ -232,7 +232,7 @@ def frame():
     global enc_v
     global enc_key
     global enc_file
-    listus=["AES-512"]
+    listus=["AES-256"]
     enc_v=tk.StringVar()
     enc_v.set("Select")
     i=tk.StringVar()
